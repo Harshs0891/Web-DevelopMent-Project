@@ -209,10 +209,13 @@ section{
     text-align: center;
     background: var(--main-color);
     cursor: pointer;
+    transition: 0.4s;
 }
 
 .services .box-container .box:hover{
-    background: var(--light-black);
+    background-color: #d35fd5;
+    transform: scale(1.1);
+    border-radius: 15px;
 }
 
 .services .box-container .box img{
