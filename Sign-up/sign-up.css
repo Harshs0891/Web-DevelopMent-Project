@@ -15,7 +15,12 @@ h3{
     margin-top: 7px;
     color: white;
     background-image: url('../Images/img-1.jpg');
+    border-radius: 15px;
+    font-weight: 500;
     background-size: contain;
+}
+.box h3{
+    color: white;
 }
 .container{
     position: absolute;
@@ -110,10 +115,13 @@ h3{
     -webkit-box-shadow: 0px 10px 41px -11px rgba(0,0,0,0.7);
     -moz-box-shadow: 0px 10px 41px -11px rgba(0,0,0,0.7);
     box-shadow: 0px 10px 41px -11px rgba(0,0,0,0.7);
+    transition: 0.4s;
 }
+
 
 .myLeftCtn .butt:hover{
     background: linear-gradient(45deg, #c85bff,#b726ff);
+    transform: scale(1.2);
 }
 
 .myLeftCtn .butt:focus{
@@ -128,6 +136,7 @@ h3{
 .butt_out{
     background: transparent;
     color: #fff;
+    margin-left: 27%;
     width: 120px;
     border: 2px solid #fff;
     border-radius: 25px;
