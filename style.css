@@ -626,6 +626,68 @@ section{
 
 /* ================================================================Gallery Section==================================== */
 
+.container{
+    margin:10%;
+    width:95vw;
+    margin:auto;
+    box-sizing: border-box;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:2rem;
+    overflow-x:hidden;
+    margin: 5%;
+}
+.image{
+    height:30rem;
+    width:35rem;
+    background-repeat:no-repeat;
+    background-size: cover;
+    filter:grayscale(100%);
+    transition:all 0.5s ease-in-out;
+    border-radius:5%;
+}
+.image:hover{
+    filter:grayscale(0%);
+    transform:scale(1.05);
+   box-shadow:0px 0px 12px 15px var(--light-black);
+   border-radius:0%;
+}
+.image1{
+    background-image: url(images/gallery-1.jpg);
+}
+.image2{
+    background-image: url(images/gallery-2.jpg);
+}
+.image3{
+    background-image: url(images/gallery-3.jpg);
+}
+.image4{
+    background-image: url(images/gallery-4.jpg);
+}
+.image5{
+    background-image: url(images/gallery-5.jpg);
+}
+.image6{
+    background-image: url(images/gallery-6.jpg);
+}
+.image7{
+    background-image: url(images/gallery-7.jpg);
+}
+.image8{
+    background-image: url(images/gallery-8.jpg);
+}
+.image9{
+    background-image: url(images/gallery-9.jpg);
+}
+.image10{
+    background-image: url(images/gallery-10.jpeg);
+}
+.image11{
+    background-image: url(images/gallery-11.jpg);
+}
+.image12{
+    background-image: url(images/gallery-12.jpg);
+}
 
 
 
