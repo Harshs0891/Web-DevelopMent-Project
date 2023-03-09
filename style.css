@@ -30,6 +30,8 @@ html{
     text-transform: capitalize;
 }
 
+/* The term 'webkit' is used in the CSS syntax for rendering content in Safari and Chrome browsers. */
+
 html::-webkit-scrollbar{
     width: 1rem;
 }
