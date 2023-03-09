@@ -1,14 +1,15 @@
 let menu = document.querySelector('#menu-btn');
 let navbar = document.querySelector('.header .navbar');
 
-menu.onclick = () => {
-    menu.classList.toggle('fa-times');
-    navbar.classList.toggle('active');
+menu.onclick = function () {
+  // toggle == removes if exits otherwise add 
+  menu.classList.toggle('fa-times');
+  navbar.classList.toggle('active');
 };
 
-window.onscroll = () => {
-    menu.classList.remove('fa-times');
-    navbar.classList.remove('active');
+window.onscroll = function () {
+  menu.classList.remove('fa-times');
+  navbar.classList.remove('active');
 };
 
 // -------swiper effect ----------
@@ -21,6 +22,9 @@ var swiper = new Swiper(".home-slider", {
     },
 });
 
+
+
+// slider for review section ========
 var swiper = new Swiper(".reviews-slider", {
     loop:true,                //for infinte right/left scrolling for swiper
     spaceBetween: 20,
@@ -43,7 +47,7 @@ var swiper = new Swiper(".reviews-slider", {
 
 // ================Load More : packages buttons functionality ==================
 let loadMoreBtn = document.querySelector('.packages .load-more .btn');
-let currentItem = 3;
+let currentItem = 6;
 
 loadMoreBtn.onclick = () => {
     let boxes = [...document.querySelectorAll('.packages .box-container .box')];

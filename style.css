@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
-:root{
+/* declaring variable */
+:root{  
     --main-color:#8e44ad;
     --black:#222;
     --white:#fff;
@@ -13,6 +14,8 @@
     --text-shadow:0 1.5rem 3rem rgba(0,0,0,.3);
 }
 
+/* making page fit to zoom defined in browser */
+/* x rem = x*default font size */
 html{
     font-size: 62.5%;
     overflow-x: hidden;
@@ -39,6 +42,7 @@ html::-webkit-scrollbar-thumb{
     background-color: var(--main-color);
 }
 
+/* applied to all header sections x,y */
 section{
     padding: 5rem 10%;
 }
@@ -105,6 +109,7 @@ section{
     justify-content: space-between;
 }
 
+/* header of page  */
 .header .logo {
     font-size: 2.5rem;
     color: var(--black);
@@ -142,15 +147,19 @@ section{
     min-height: 60rem;
 }
 
+/* first in hidden form  */
 .home .slide .content{
     width: 85rem;
     display: none;
 }
 
+/* after the functioning of slider the content is visible in inlineblock form  */
 .home .swiper-slide-active .content{
     display: inline-block;
 }
 
+
+/* animation part of FadeIn is defined from line 50 */
 .home .slide .content span{
     display: block;
     font-size: 2.2rem;
@@ -176,13 +185,11 @@ section{
 
 .home .swiper-button-next,
 .home .swiper-button-prev{
-    top: inherit;
-    left: inherit;
     bottom: 0;
     right: 0;
     height: 7rem;
     width: 7rem;
-    background: var(--white);
+    background: transparent;
     color: var(--black);
 }
 
@@ -190,9 +197,11 @@ section{
 .home .swiper-button-prev:hover{
     background: var(--main-color);
     color: var(--white);
+    border-radius: 50%;
 
 }
 
+/* defined the arrow size included from swiper */
 .home .swiper-button-next::after,
 .home .swiper-button-prev::after{
     font-size: 2rem;
@@ -205,11 +214,13 @@ section{
 .services .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(16rem,1fr));
+    /* minimum width 16rem and max width 1fraction */
     gap: 1.5rem;
 }
 
 .services .box-container .box{
     padding: 3rem 2rem;
+    /* padding: y x; */
     text-align: center;
     background: var(--main-color);
     cursor: pointer;
@@ -239,6 +250,7 @@ section{
 }
 
 .home-about .image{
+    /* flex: flex-grow flex-shrink flex-basis|auto|initial|inherit;  */
     flex: 1 1 41rem;
 }
 
@@ -258,7 +270,7 @@ section{
 }
 
 .home-about .content p{
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     padding:1rem 0;
     line-height: 2;
     color: var(--black);
@@ -276,13 +288,12 @@ section{
 
 .home-packages .box-container .box{
     border: var(--border);
+    border-radius: 5%;
+    overflow: hidden;
     box-shadow: var(--box-shadow);
     background: var(--white);
 }
 
-.home-packages .box-container .box:hover .image img{
-    transform: scale(1.1);
-}
 
 .home-packages .box-container .box .image{
     height: 25rem;
@@ -294,6 +305,10 @@ section{
     width: 100%;
     object-fit: cover;
     transition: .2s linear;
+}
+
+.home-packages .box-container .box:hover .image img{
+    transform: scale(1.1);
 }
 
 .home-packages .box-container .box .content{
@@ -318,6 +333,7 @@ section{
     margin-top: 2rem;
 }
 
+/* offer section  */
 .home-offer{
     text-align:center;
 }
@@ -340,6 +356,28 @@ section{
     line-height:2;
     padding:1rem 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =================================================ABOUT PAGE============================================================= */
+
+
+
 
 .about{
     display:flex;
@@ -378,6 +416,7 @@ section{
     margin-top: 2rem;
     display:flex;
     flex-wrap:wrap;
+    justify-content: space-around;
     gap:1.5rem;
     align-items:flex-end;
 }
@@ -395,10 +434,10 @@ section{
 
 .about .content .icons-container .icons span{
     font-size:1rem;
-    color:var(--light-black);
+    color:var(--black);
     display:block;
 }
-/* reviews ============================ */
+/*==================== reviews ============================ */
 .reviews{
     background: var(--light-bg);
 }
@@ -410,6 +449,7 @@ section{
     text-align: center;
     box-shadow: var(--box-shadow);
     user-select: none;
+    /* user cannot select and copy the content of the review section */
 
 }
 
@@ -447,6 +487,35 @@ section{
     margin-top: 1rem;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* =========================================================Packages=============================================================== */
 
 .packages .box-container{
@@ -474,9 +543,6 @@ section{
     display: inline-block;
 }
 
-.packages .box-container .box:hover .image img{
-    transform: scale(1.1);
-}
 
 .packages .box-container .box .image{
     height: 25rem;
@@ -488,6 +554,9 @@ section{
     width: 100%;
     object-fit: cover;
     transition: .2s linear;
+}
+.packages .box-container .box:hover .image img{
+    transform: scale(1.1);
 }
 
 .packages .box-container .box .content{
@@ -512,10 +581,41 @@ section{
     margin-top: 2rem;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ======================book sections============================================ */
+
 .booking .book-form {
     padding: 2rem;
     background: var(--light-bg);
+    /* background: rgb(179, 8, 8); */
 }
 
 .booking .book-form .flex {
@@ -540,7 +640,7 @@ section{
 }
 
 .booking .book-form .flex .inputBox input:focus{
-    background: var(--black);
+    background: var(--main-color);
     color: var(--white);  
 }
 
@@ -550,7 +650,7 @@ section{
 
 .booking .book-form .flex .inputBox span{
     font-size: 1.5rem;
-    color: var(--light-black);
+    color: var(--black);
 }
 
 .booking .book-form .btn{
@@ -570,6 +670,25 @@ section{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================footer============================= */
 
 
 
@@ -648,7 +767,7 @@ section{
     height: 450px;
     object-fit: cover;
     object-position: center;
-    filter:grayscale(100%);
+    filter:grayscale(60%);
     transition:all 0.5s ease-in-out;
     border-radius:5%;
 }
@@ -656,6 +775,7 @@ section{
     filter:grayscale(0%);
     transform:scale(1.05);
     box-shadow:0px 0px 12px 15px var(--light-black);
+    /* x y blur radius  */
     border-radius:0%;
 
 }
@@ -717,6 +837,7 @@ section{
         border-top: var(--border);
         padding: 2rem; 
         transition: 0.2s linear;
+        /* creating a dimensional area for menus  */
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
     .header .navbar.active{
