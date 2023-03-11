@@ -40,7 +40,9 @@ h3{
     color: rgb(192, 192, 192);
     font-size: 12px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -80,9 +82,12 @@ h3{
 }
 
 .box{
-    position: relative;
-    margin: 20px;
-    margin-bottom: 100px;
+    height: 16rem;
+    width: 14rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
 }
 
 .myLeftCtn .myInput{
@@ -127,16 +132,15 @@ h3{
 .myLeftCtn .butt:focus{
     outline: none;
 }
-.myLeftCtn .fas{
+/* .myLeftCtn .fas{
     position: relative;
     color: #bb36fd;
     left: 36px;
-}
+} */
 
 .butt_out{
     background: transparent;
     color: #fff;
-    margin-left: 27%;
     width: 120px;
     border: 2px solid #fff;
     border-radius: 25px;
@@ -158,4 +162,49 @@ h3{
 }
 small{
     padding: 3px;
+}
+.login{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background: transparent;
+    color: #fff;
+    border: solid #fff;
+    border-radius: 25px;
+    height: 54px;
+    font-size: medium;
+    font-weight: bold;
+    transition: 0.4s;
+}
+.abc{
+    width: 3rem;
+    height: 3rem;
+    padding-top: 5px;
+    font-size: x-large;
+    border-radius: 50%;
+}
+.login:hover{
+    background-color: white;
+    text-decoration: none;
+    transform: scale(1.2);
+    color: #8e44ad;
+}
+.login:hover .fa-google {
+    background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+.login:hover .google{
+    background-color: whitesmoke;
+}
+.login:hover .facebook{
+    background-color: rgb(66 103 178);
+    color: white;
+}
+.login:hover .twitter{
+    background-color: rgb(29 161 242);
+    color: white;
 }
