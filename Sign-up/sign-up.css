@@ -6,11 +6,10 @@
 body{
     background: #fbf3ff;
 }
-h3{
+/* h3{
     width: 17rem;
     height: 13rem;
     text-align: center;
-    /* border: 2px solid red; */
     padding-top: 72px;
     margin-top: 7px;
     color: white;
@@ -21,7 +20,7 @@ h3{
 }
 .box h3{
     color: white;
-}
+} */
 .container{
     position: absolute;
     max-width: 1000px;
@@ -148,10 +147,16 @@ h3{
     -webkit-box-shadow: 0px 10px 49px -14px rgba(0,0,0,0.7);
     -moz-box-shadow: 0px 10px 49px -14px rgba(0,0,0,0.7);
     box-shadow: 0px 10px 49px -14px rgba(0,0,0,0.7);
+    transition: 0.4s;
 }
 
 .butt_out:hover{
     border: 2px solid #eecbff;
+    cursor: pointer;
+    background: white;
+    color: #8e44ad;
+    font-weight: bold;
+    transform: scale(1.2);
 }
 
 .butt_out:focus{
